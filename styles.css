@@ -19,7 +19,7 @@ body {
 }
 
 #typing-text {
-    font-size: 2rem;
+    font-size: 28px;;
     color: #333;
     white-space: nowrap;
     overflow: hidden;
@@ -36,7 +36,7 @@ img {
     height: auto;
 }
 
-/* Media Queries for responsiveness */
+
 @media screen and (max-width: 768px) {
     #container {
         width: 95%;
@@ -72,7 +72,7 @@ section {
     display: none;
 }
 
-/* Homepage Styling */
+
 #homepage {
     background: url('qweee.png') no-repeat center center;
     background-size: 50%;
@@ -137,8 +137,8 @@ section {
 
 .intro .greeting {
     color: #2c3e50;
-    font-size: 20px; /* Slightly larger than the description */
-    font-style: normal; /* Remove italic to match the image */
+    font-size: 20px; 
+    font-style: normal; 
     margin-bottom: 10px;
     line-height: 1.5;
 }
