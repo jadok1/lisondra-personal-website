@@ -1,9 +1,4 @@
-body {
-    font-family: 'Poppins',  sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: white
-}
+
 
 body {
     margin: 0;
@@ -19,12 +14,14 @@ body {
 }
 
 #typing-text {
+    color: #c0392b;
     font-size: 28px;
-    color: #333;
+    font-weight: bold;
+    border-right: 2px solid #c0392b; /* Cursor effect */
     white-space: nowrap;
     overflow: hidden;
-    border-right: 2px solid #333;
     display: inline-block;
+    vertical-align: bottom;
 }
 
 #image-container {
