@@ -19,7 +19,7 @@ body {
 }
 
 #typing-text {
-    font-size: 28px;;
+    font-size: 28px;
     color: #333;
     white-space: nowrap;
     overflow: hidden;
@@ -44,7 +44,7 @@ img {
     }
 
     #typing-text {
-        font-size: 1.5rem;
+        font-size: 28px;
     }
 
     img {
@@ -58,7 +58,7 @@ img {
     }
 
     #typing-text {
-        font-size: 1.2rem;
+        font-size: 28px;
     }
 }
 
