@@ -13,16 +13,7 @@ body {
     padding-top: 50px;
 }
 
-#typing-text {
-    color: #c0392b;
-    font-size: 28px;
-    font-weight: bold;
-    border-right: 2px solid #c0392b; /* Cursor effect */
-    white-space: nowrap;
-    overflow: hidden;
-    display: inline-block;
-    vertical-align: bottom;
-}
+
 
 #image-container {
     margin-top: 20px;
@@ -40,9 +31,7 @@ img {
         padding-top: 20px;
     }
 
-    #typing-text {
-        font-size: 28px;
-    }
+
 
     img {
         width: 100%;
@@ -54,9 +43,7 @@ img {
         padding-top: 10px;
     }
 
-    #typing-text {
-        font-size: 28px;
-    }
+
 }
 
 
