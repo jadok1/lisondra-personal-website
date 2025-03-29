@@ -1,9 +1,8 @@
-
-
 body {
+    font-family: 'Poppins',  sans-serif;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    background-color: white
 }
 
 #container {
@@ -13,7 +12,15 @@ body {
     padding-top: 50px;
 }
 
-
+#typing-text {
+    font-size: 2rem;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #333;
+    display: inline-block;
+    width: 24ch;
+}
 
 #image-container {
     margin-top: 20px;
@@ -24,14 +31,16 @@ img {
     height: auto;
 }
 
-
+/* Media Queries for responsiveness */
 @media screen and (max-width: 768px) {
     #container {
         width: 95%;
         padding-top: 20px;
     }
 
-
+    #typing-text {
+        font-size: 1.5rem;
+    }
 
     img {
         width: 100%;
@@ -43,7 +52,10 @@ img {
         padding-top: 10px;
     }
 
-
+    #typing-text {
+        font-size: 1.2rem;
+      
+    }
 }
 
 
@@ -56,7 +68,7 @@ section {
     display: none;
 }
 
-
+/* Homepage Styling */
 #homepage {
     background: url('qweee.png') no-repeat center center;
     background-size: 50%;
@@ -121,21 +133,10 @@ section {
 
 .intro .greeting {
     color: #2c3e50;
-    font-size: 20px; 
-    font-style: normal; 
+    font-size: 20px; /* Slightly larger than the description */
+    font-style: normal; /* Remove italic to match the image */
     margin-bottom: 10px;
     line-height: 1.5;
-}
-
-.intro .highlight-name {
-    color: #c0392b;
-    font-size: 28px;
-    font-weight: bold;
-    border-right: 2px solid #c0392b; /* Cursor effect */
-    white-space: nowrap;
-    overflow: hidden;
-    display: inline-block;
-    vertical-align: bottom;
 }
 
 .intro .highlight-name2 {
