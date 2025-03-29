@@ -308,10 +308,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function toggleLike(element) {
     const heartImg = element.querySelector('img');
-    if (heartImg.src.includes('images/red-heart-outline.png')) {
-        heartImg.src = 'images/red-heart-colored.png'; // Path to the red heart image
+    if (heartImg.src.includes('red-heart-outline.png')) {
+        heartImg.src = 'red-heart-colored.png'; // Path to the red heart image
     } else {
-        heartImg.src = 'images/red-heart-outline.png'; // Path to the default heart image
+        heartImg.src = 'red-heart-outline.png'; // Path to the default heart image
     }
 }
 
