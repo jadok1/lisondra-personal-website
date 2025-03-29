@@ -131,9 +131,10 @@ section {
 
 .intro .highlight-name {
     color: #c0392b;
+    margin-top: 5px;
     font-size: 28px;
     font-weight: bold;
-    border-right: 2px solid #c0392b; /* Cursor effect */
+    border-right: 1px solid #c0392b; /* Cursor effect */
     white-space: nowrap;
     overflow: hidden;
     display: inline-block;
