@@ -1,0 +1,345 @@
+body {
+    font-family: 'Poppins',  sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Homepage Styling */
+#homepage {
+    background: url('qweee.png') no-repeat center center;
+    background-size: 50%;
+    background-position: calc(50% + 200px) center; 
+    padding: 40px;
+    overflow: hidden;
+}
+
+.homepage-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto; 
+    height: 600px;
+}
+
+.carousel {
+    width: 450px;
+    height: 500px;
+    position: relative;
+    perspective: 1000px;
+    flex: 0 0 auto;
+}
+
+.slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slides img {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    border-radius: 20px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.slides img.active {
+    transform: translateZ(0);
+    opacity: 1;
+    z-index: 10;
+}
+
+.slides img:not(.active) {
+    transform: translateZ(-50px) rotate(5deg); 
+    opacity: 0.7;
+}
+
+
+
+.intro {
+    flex: 1;
+    text-align: left;
+}
+
+.intro .greeting {
+    color: #2c3e50;
+    font-size: 20px; /* Slightly larger than the description */
+    font-style: normal; /* Remove italic to match the image */
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.intro .highlight-name {
+    color: #c0392b;
+    font-size: 28px; 
+    font-weight: bold;
+}
+
+.intro .highlight-name2 {
+    color: #c0392b;
+    font-size: 17px; 
+    font-weight: bold;
+}
+
+.intro .program {
+    color: #c0392b;
+    font-size: 40px; 
+    font-weight: 1000;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.intro .description {
+    color: #2c3e50;
+    font-size: 16px; /* Smaller font for the description */
+    font-style: normal; /* Remove italic */
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.intro h3 {
+    color: #2c3e50;
+    font-style: normal; /* Remove italic */
+    margin-bottom: 15px;
+    line-height: 2.0;
+    font-size: 18px;
+}
+
+/* Navigation */
+.main-nav {
+    background-color: rgba(250, 249, 246, 0);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 1200px;
+    margin-left: -170px;
+    
+}
+
+.nav-name {
+    display: flex;
+    align-items: center; /* Vertically center the logo and text */
+}
+
+.nav-name h1 {
+    color: #c0392b;
+    font-size: 35px;
+    font-weight: 1000;
+    margin: 0; 
+    padding-left: 150px; 
+    font-style: italic;
+}
+
+.main-navs {
+    display: flex; 
+    margin-left: 300px;
+    align-items: center; 
+    
+}
+
+.main-nav-wrapper {
+    width: 98%;
+    margin: 0 auto; 
+    margin-bottom: 15px;
+    border-bottom: 5px  double  rgba(123, 66, 66, 0.5);
+}
+
+.main-navs button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: transparent;
+    color: black;
+    border: none;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.main-navs button:hover {
+    color: darkred;
+    text-decoration: underline;
+    text-underline-offset: 10px; 
+}
+
+
+
+/* Floating Container Styling */
+#floating-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent gray backdrop */
+    z-index: 999;
+}
+
+#floating-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 300px;
+    text-align: left;
+}
+
+#floating-container h3 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+#floating-container input, #floating-container select {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#floating-container button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#floating-container button:hover {
+    background-color: #c0392b;
+}
+
+#floating-container .close-btn {
+    background-color: #7f8c8d;
+}
+
+#floating-container .close-btn:hover {
+    background-color: #95a5a6;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    gap: 10px; 
+    margin-top: -40px;
+}
+
+.social-icon {
+    margin-left: 20px;
+    width: 30px; 
+    height: 30px;
+    transition: transform 0.3s ease; 
+}
+
+.social-icon:hover {
+    transform: scale(1.1); 
+}
+
+
+#portfolio h2 {
+    font-size: xx-large; /* As provided */
+    font-weight: 1000; /* As provided */
+    color: #ffffff; /* White text for contrast */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow for readability */
+    margin-bottom: 20px;
+    position: relative; /* Ensure it respects z-index */
+    z-index: 1; /* Place above the image */
+}
+#portfolio {
+    position: relative; /* Establish positioning context for child elements */
+    min-height: 83vh; /* Ensure the section is at least the height of the viewport */
+    padding: 20px; /* Existing padding */
+    text-align: center; /* Existing text alignment */
+    overflow: hidden; /* Prevent overflow issues with the image */
+    border-radius: 20px;
+}
+
+#portfolio img {
+    position: absolute; /* Position the image absolutely within the section */
+    top: 0;
+    left: 0;
+    bottom: auto;
+    width: 105%; /* Make the image cover the entire width */
+    height: 105%; /* Make the image cover the entire height */
+    object-fit: cover; /* Ensure the image scales to cover the section */
+    z-index: 0; /* Place the image behind other content */
+    
+}
+
+.challenges {
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.248); /* Semi-transparent white for readability */
+    padding: 20px; /* Existing padding */
+    margin: 20px auto; /* Existing margin */
+    max-width: 400px; /* Existing max-width */
+    border-radius: 10px; /* Existing border-radius */
+    text-align: center; /* Existing text alignment */
+    position: relative; /* Ensure it respects z-index */
+    z-index: 1; /* Place above the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.challenges p {
+    font-size: 1.2em; 
+    margin-bottom: 15px; 
+    color: #ffffff; /* White text for contrast */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow for readability */
+}
+
+.challenges h3 {
+    margin-top: 2px;
+    font-size: 25px; 
+    font-weight: 700;
+    margin-bottom: 15px; 
+    color: #ffffff; /* White text for contrast */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow for readability */
+}
+
+
+.challenges .challenge-buttons button {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    padding: 15px 25px;
+    background-color: #e74c3c;
+    color: #FAF9F6;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+    
+}
+
+.challenges .challenge-buttons button:hover {
+    background-color: #c0392b;
+    transform: scale(1.05); /* Slightly zoom the button */
+}

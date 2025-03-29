@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lisondra - Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="main-nav-wrapper">
+        <nav class="main-nav">
+            <div class="nav-name">
+                <h1>Lisondra, Jade M.</h1>
+            </div>
+            <div class="main-navs">
+                <button onclick="showSection('homepage')">Home</button>
+                <button onclick="showSection('portfolio')">Portfolio</button>
+                <button onclick="showSection('favorites')">Favorites</button>
+            </div>
+        </nav>
+    </div>
+
+
+    <section id="homepage">
+        <div class="homepage-container">
+            <div class="carousel">
+                <div class="slides">
+                    <img src="sauna.jpg" alt="Profile 1" class="active">
+                    <img src="qpal.jpeg" alt="Profile 2">
+                    <img src="qpal2.jpg" alt="Profile 3">
+                    <img src="qpal1.jpg" alt="Profile 4">
+                </div>
+            </div>
+            <div class="intro">
+                <p class="greeting">Hello! There, <br>I'm &nbsp;<span class="highlight-name" id="typing-text"></span>
+                <h2 class="program">BSIT Student</h2>
+                <p class="description">a 20-year-old pursuing a Bachelor of Science in Information Technology at <span class="highlight-name2">Cebu Technological University - Argao Campus</span>. 
+                    I'm currently in my second year, exploring various fields such as <span class="highlight-name2">Programming, Information Management, Networking, </span>and <span class="highlight-name2"> Web Development</span>.
+                     Lives in Lamacan, Argao, Cebu, and when I'm not immersed in coding or tech projects, I enjoy playing online games to unwind.</p>
+                <h3>Contact on:<br><br></h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/bubujadokk">
+                        <img src="fblogo.png" alt="Facebook Logo" class="social-icon">
+                    </a>
+                    <a href="https://www.instagram.com/_jdokk/">
+                        <img src="ig.png" alt="Instagram Logo" class="social-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="portfolio" class="hidden">
+        <img src="smoke.gif">
+        <h2>Brain Master Challenge</h2>
+        <br>
+        <div class="challenges"> 
+            <h3>Function Integration</h3>
+            <p>Pick your Choice</p>
+            <div class="challenge-buttons">
+                <button onclick="showFloatingContainer('tempConverter')">Temperature Converter</button>
+                <button onclick="showFloatingContainer('wordCompare')">The Longer Word</button>
+                <button onclick="showFloatingContainer('birthstone')">Know My Birthstone</button>
+                <button onclick="showFloatingContainer('mathOps')">Basic Operators</button>
+                <button onclick="showFloatingContainer('acceleration')">Compute for Acceleration</button>
+            </div>
+            <div id="floating-backdrop" class="hidden"></div>
+            <div id="floating-container" class="hidden"></div>
+        </div>
+    </section>
+
+    <section id="favorites" class="hidden">
+        <iframe src="favs.html" width="100%" height="1850px" frameborder="0" scrolling="no" style="display: block;"></iframe>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
