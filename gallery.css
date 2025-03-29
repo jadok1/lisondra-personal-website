@@ -1,5 +1,5 @@
 body {
-    margin: 0;
+    margin: 0px;
     font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;
@@ -18,12 +18,82 @@ body {
 }
 
 #art-exhibit {
+    row-gap: 100px;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    row-gap: 100px;
-    width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+    #content {
+        width: 90%;
+    }
+
+    .artwork {
+        width: 45%;
+        height: auto;
+    }
+
+    .heart1 {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #content {
+        width: 95%;
+    }
+
+    .artwork {
+        width: 45%;
+        height: auto;
+    }
+
+    .heart1 {
+        width: 50px;
+        height: 50px;
+        top: -40px;
+        left: 180px;
+    }
+
+    .grey, .greyy {
+        width: 100%;
+    }
+
+    .comments-section {
+        margin-top: 250px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #content {
+        width: 100%;
+    }
+
+    .artwork {
+        width: 100%;
+        height: auto;
+    }
+
+    .heart1 {
+        width: 40px;
+        height: 40px;
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .grey, .greyy {
+        width: 100%;
+        height: 40px;
+    }
+
+    .comments-section {
+        margin-top: 200px;
+    }
 }
 
 .artwork {
@@ -36,26 +106,56 @@ body {
     background-repeat: no-repeat;
     cursor: pointer;
     border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.artwork:hover {
-    transform: scale(1.05);
 }
 
 .artwork button {
     background-color: #e74c3c;
     color: white;
-    border: none;
+    border: #e74c3c;
     height: 25px;
     width: 70px;
     border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
 .artwork button:hover {
-    background-color: #c0392b;
+    border: #c0392b;
+}
+
+#artwork-1 {
+    background-image: url('fav1.png');
+}
+
+#artwork-2 {
+    background-image: url('fav2.jpeg');
+}
+
+#artwork-3 {
+    background-image: url('fav3.jpeg');
+}
+
+#artwork-4 {
+    background-image: url('fav4.png');
+}
+
+#artwork-5 {
+    background-image: url('fav5.png');
+}
+
+#artwork-6 {
+    background-image: url('fav6.png');
+}
+
+#artwork-7 {
+    background-image: url('fav7.jpg');
+}
+
+#artwork-8 {
+    background-image: url('fav8.png');
+}
+
+#artwork-9 {
+    background-image: url('fav9.png');
 }
 
 .heart1 {
@@ -66,24 +166,54 @@ body {
     left: 240px;
     z-index: 5;
     border-radius: 50%;
+    line-height: 68px;
     text-align: center;
-    transition: transform 0.3s;
+}
+
+.tosmall {
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
 }
 
 .heart1:hover {
     cursor: pointer;
-    transform: scale(1.1);
 }
 
-.grey, .greyy {
+.comment-list {
+    margin-top: -200px;
+}
+
+.heart1::after {
+    background-color: #A3ACE4;
+    cursor: pointer;
+}
+
+.grey {
     background-color: #EFEFEF;
     position: relative;
     width: 300px;
     height: 50px;
     top: 300px;
+    left: 0px;
     z-index: 6;
     opacity: 80%;
     text-align: center;
+    line-height: 25px;
+    border-radius: 0 0 10px 10px;
+}
+
+.greyy {
+    background-color: #EFEFEF;
+    position: relative;
+    width: 300px;
+    height: 50px;
+    top: 300px;
+    left: 0px;
+    z-index: 6;
+    opacity: 80%;
+    text-align: center;
+    line-height: 50px;
     border-radius: 0 0 10px 10px;
 }
 
@@ -121,51 +251,6 @@ body {
     transition: opacity 0.3s ease;
 }
 
-@media screen and (max-width: 768px) {
-    #content {
-        width: 90%;
-    }
-
-    .artwork {
-        width: 45%;
-        height: auto;
-    }
-
-    .heart1 {
-        width: 50px;
-        height: 50px;
-        top: -40px;
-        left: 180px;
-    }
-
-    .grey, .greyy {
-        width: 100%;
-    }
-
-    .comments-section {
-        margin-top: 250px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .artwork {
-        width: 100%;
-        height: auto;
-    }
-
-    .heart1 {
-        width: 40px;
-        height: 40px;
-        top: -30px;
-        left: 150px;
-    }
-
-    .grey, .greyy {
-        width: 100%;
-        height: 40px;
-    }
-
-    .comments-section {
-        margin-top: 200px;
-    }
+.comments ul {
+    list-style: none;
 }
