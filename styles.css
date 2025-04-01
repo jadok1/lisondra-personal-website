@@ -5,7 +5,7 @@ body {
     background-color: white
 }
 
-.close-btn {
+.close-btnn {
     position: fixed;
     top: 10px;
     right: 10px;
@@ -16,7 +16,7 @@ body {
     color: #333;
     z-index: 1000;
 }
-.close-btn:hover {
+.close-btnn:hover {
     color: #ff0000;
 }
 
