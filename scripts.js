@@ -38,116 +38,34 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// Portfolio Floating Container Functions
-function showFloatingContainer(type) {
-    const backdrop = document.getElementById('floating-backdrop');
-    const container = document.getElementById('floating-container');
-    container.innerHTML = ''; // Clear previous content
-
-    let html = '';
-    switch(type) {
-        case 'tempConverter':
-            html = `
-                <h3>Temperature Converter</h3>
-                <label for="celsius">Celsius:</label>
-                <input type="number" id="celsius" placeholder="Enter Celsius">
-                <button onclick="convertCelsiusToFahrenheit()">Calculate</button>
-                <button class="close-btn" onclick="closeFloatingContainer()">Close</button>
-            `;
-            break;
-        case 'wordCompare':
-            html = `
-                <h3>The Longer Word</h3>
-                <label for="word1">First Word:</label>
-                <input type="text" id="word1" placeholder="Enter first word">
-                <label for="word2">Second Word:</label>
-                <input type="text" id="word2" placeholder="Enter second word">
-                <button onclick="compareWord()">Compare</button>
-                <button class="close-btn" onclick="closeFloatingContainer()">Close</button>
-            `;
-            break;
-        case 'birthstone':
-            html = `
-                <h3>Know My Birthstone</h3>
-                <label for="birthmonth">Birth Month:</label>
-                <input type="text" id="birthmonth" placeholder="Enter birthmonth (e.g., January)">
-                <button onclick="yourBirthStone()">Find</button>
-                <button class="close-btn" onclick="closeFloatingContainer()">Close</button>
-            `;
-            break;
-        case 'mathOps':
-            html = `
-                <h3>Basic Operators</h3>
-                <label for="num1">First Number:</label>
-                <input type="number" id="num1" placeholder="Enter first number">
-                <label for="num2">Second Number:</label>
-                <input type="number" id="num2" placeholder="Enter second number">
-                <label for="operator">Operator:</label>
-                <select id="operator">
-                    <option value="M">Multiplication</option>
-                    <option value="D">Division</option>
-                    <option value="A">Addition</option>
-                    <option value="S">Subtraction</option>
-                </select>
-                <button onclick="basicMathOps()">Calculate</button>
-                <button class="close-btn" onclick="closeFloatingContainer()">Close</button>
-            `;
-            break;
-        case 'acceleration':
-            html = `
-                <h3>Compute for Acceleration</h3>
-                <label for="initialVelocity">Initial Velocity (m/s):</label>
-                <input type="number" id="initialVelocity" placeholder="Initial Velocity (m/s)">
-                <label for="finalVelocity">Final Velocity (m/s):</label>
-                <input type="number" id="finalVelocity" placeholder="Final Velocity (m/s)">
-                <label for="changeTime">Change in Time (s):</label>
-                <input type="number" id="changeTime" placeholder="Change in Time (s)">
-                <button onclick="computeAcceleration()">Calculate</button>
-                <button class="close-btn" onclick="closeFloatingContainer()">Close</button>
-            `;
-            break;
-    }
-
-    container.innerHTML = html;
-    backdrop.classList.remove('hidden');
-    container.classList.remove('hidden');
-}
-
-function closeFloatingContainer() {
-    const backdrop = document.getElementById('floating-backdrop');
-    const container = document.getElementById('floating-container');
-    backdrop.classList.add('hidden');
-    container.classList.add('hidden');
-    container.innerHTML = '';
-}
 
 // Modified Portfolio Functions
 function convertCelsiusToFahrenheit() {
-    const celsius = parseFloat(document.getElementById('celsius').value);
+    let celsius = parseFloat(prompt("Enter Celsius"));
     if (isNaN(celsius)) {
         alert("Please enter a valid number");
         return;
     }
-    const temp_F = (celsius * 1.8 + 32).toFixed(2);
+    let temp_F = (celsius * 1.8 + 32).toFixed(2);
     alert(`${celsius}°C converted into ${temp_F}°F`);
 }
 
 function computeAcceleration() {
-    const iv = parseFloat(document.getElementById('initialVelocity').value);
-    const fv = parseFloat(document.getElementById('finalVelocity').value);
-    const ct = parseFloat(document.getElementById('changeTime').value);
+    let iv = parseFloat(prompt("Enter Initial Velocity"));
+    let fv = parseFloat(prompt("Enter Final Velocity"));
+    let ct = parseFloat(prompt("Enter Change Time"));
     if (isNaN(iv) || isNaN(fv) || isNaN(ct) || ct === 0) {
         alert("Please enter valid numbers (time cannot be zero)");
         return;
     }
-    const acceleration = ((fv - iv) / ct).toFixed(2);
+    let acceleration = ((fv - iv) / ct).toFixed(2);
     alert(`Acceleration is ${acceleration} meters every second squared.`);
 }
 
 function basicMathOps() {
-    const num1 = parseFloat(document.getElementById('num1').value);
-    const num2 = parseFloat(document.getElementById('num2').value);
-    const operator = document.getElementById('operator').value;
+    let num1 = parseFloat(prompt("Enter first number"));
+    let num2 = parseFloat(prompt("Enter second number"));
+    let operator = prompt("Operators:\n M - Multiplication\n D- Division\n A- Addition\n S- Subtraction\nEnter Operator:").toUpperCase();
     let result;
     if (isNaN(num1) || isNaN(num2)) {
         alert("Please enter valid numbers");
@@ -178,55 +96,55 @@ function basicMathOps() {
 }
 
 function yourBirthStone() {
-    const month = document.getElementById('birthmonth').value.toLowerCase().trim();
+    let month = prompt("Enter birth month").toLowerCase().trim();
     let a;
     switch(month) {
         case "january":
             a = "Garnet";
             break;
         case "february":
-            a="Amethyst";
-            break;
+            alert("Your Birthstone is Amethyst");
+            return;
         case "march":
-            a="Aquamarine";
-            break;
+            alert("Your Birthstone is Aquamarine");
+            return;
         case "april":
-            a="Diamond";
-            break;
+            alert("Your Birthstone is Diamond");
+            return;
         case "may":
-            a="Emerald";
-            break;
+            alert("Your Birthstone is Emerald");
+            return;
         case "june":
-            a="Alexandrite & Pearl";
-            break;
+            alert("Your Birthstone is Alexandrite & Pearl");
+            return;
         case "july":
-            a="Ruby";
-            break;
+            alert("Your Birthstone is Ruby");
+            return;
         case "august":
-            a="Peridot";
-            break;
+            alert("Your Birthstone is Peridot");
+            return;
         case "september":
-            a="Sapphire";
-            break;
+            alert("Your Birthstone is Sapphire");
+            return;
         case "october":
-            a="Opal & Tourmaline";
-            break;
+            alert("Your Birthstone is Opal & Tourmaline");
+            return;
         case "november":
-            a="Citrine & Topaz";
-            break;
+            alert("Your Birthstone is Citrine & Topaz");
+            return;
         case "december":
-            a="Blue Zircon, Turquoise, & Tanzanite";
-            break;
+            alert("Your Birthstone is Blue Zircon, Turquoise, & Tanzanite");
+            return;
         default:
-            a="Invalid month input";
-            break;
+            alert("Invalid month input");
+            return;
     }
     alert(`Your Birthstone is ${a}`);
 }
 
 function compareWord() {
-    const fs = document.getElementById('word1').value;
-    const ss = document.getElementById('word2').value;
+    let fs = prompt("Enter first word");
+    let ss = prompt("Enter second word");
     if (!fs || !ss) {
         alert("Please enter both words");
         return;
@@ -308,10 +226,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function toggleLike(element) {
     const heartImg = element.querySelector('img');
-    if (heartImg.src.includes('red-heart-outline.png')) {
-        heartImg.src = 'red-heart-colored.png'; // Path to the red heart image
+    if (heartImg.src.includes('images/red-heart-outline.png')) {
+        heartImg.src = 'images/red-heart-colored.png'; // Path to the red heart image
     } else {
-        heartImg.src = 'red-heart-outline.png'; // Path to the default heart image
+        heartImg.src = 'images/red-heart-outline.png'; // Path to the default heart image
     }
 }
 
