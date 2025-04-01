@@ -185,41 +185,41 @@ function yourBirthStone() {
             a = "Garnet";
             break;
         case "february":
-            alert("Your Birthstone is Amethyst");
-            return;
+            a="Amethyst";
+            break;
         case "march":
-            alert("Your Birthstone is Aquamarine");
-            return;
+            a="Aquamarine";
+            break;
         case "april":
-            alert("Your Birthstone is Diamond");
-            return;
+            a="Diamond";
+            break;
         case "may":
-            alert("Your Birthstone is Emerald");
-            return;
+            a="Emerald";
+            break;
         case "june":
-            alert("Your Birthstone is Alexandrite & Pearl");
-            return;
+            a="Alexandrite & Pearl";
+            break;
         case "july":
-            alert("Your Birthstone is Ruby");
-            return;
+            a="Ruby";
+            break;
         case "august":
-            alert("Your Birthstone is Peridot");
-            return;
+            a="Peridot";
+            break;
         case "september":
-            alert("Your Birthstone is Sapphire");
-            return;
+            a="Sapphire";
+            break;
         case "october":
-            alert("Your Birthstone is Opal & Tourmaline");
-            return;
+            a="Opal & Tourmaline";
+            break;
         case "november":
-            alert("Your Birthstone is Citrine & Topaz");
-            return;
+            a="Citrine & Topaz";
+            break;
         case "december":
-            alert("Your Birthstone is Blue Zircon, Turquoise, & Tanzanite");
-            return;
+            a="Blue Zircon, Turquoise, & Tanzanite";
+            break;
         default:
-            alert("Invalid month input");
-            return;
+            a="Invalid month input";
+            break;
     }
     alert(`Your Birthstone is ${a}`);
 }
