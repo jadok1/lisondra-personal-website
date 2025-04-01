@@ -162,7 +162,7 @@ section {
 /* Homepage Styling */
 #homepage {
     background: url('qweee.png') no-repeat center center;
-    background-size: 50%;
+    background-size: 45%;
     background-position: calc(50% + 200px) center; 
     padding: 40px;
     overflow: hidden;
