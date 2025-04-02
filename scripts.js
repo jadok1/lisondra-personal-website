@@ -1,6 +1,6 @@
 
 function convertCelsiusToFahrenheit() {
-    let celsius = parseFloat(prompt("Enter Celsius"));
+    let celsius = parseFloat(prompt("Enter Celsius to convert into Fahrenheit"));
     if (isNaN(celsius)) {
         alert("Please enter a valid number");
         return;
@@ -10,9 +10,9 @@ function convertCelsiusToFahrenheit() {
 }
 
 function computeAcceleration() {
-    let iv = parseFloat(prompt("Enter Initial Velocity"));
-    let fv = parseFloat(prompt("Enter Final Velocity"));
-    let ct = parseFloat(prompt("Enter Change Time"));
+    let iv = parseFloat(prompt("Enter Initial Velocity in m/s or meter per second"));
+    let fv = parseFloat(prompt("Enter Final Velocity in m/s or meter per second"));
+    let ct = parseFloat(prompt("Enter Change Time in seconds"));
     if (isNaN(iv) || isNaN(fv) || isNaN(ct) || ct === 0) {
         alert("Please enter valid numbers (time cannot be zero)");
         return;
@@ -55,7 +55,7 @@ function basicMathOps() {
 }
 
 function yourBirthStone() {
-    let month = prompt("Enter birth month").toLowerCase().trim();
+    let month = prompt("Enter your Birth Month").toLowerCase().trim();
     let a;
     switch(month) {
         case "january":
