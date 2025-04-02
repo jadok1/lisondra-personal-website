@@ -1,45 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const texts = ["Jade Manila Lisondra", "Jadok"]; // Two texts to alternate
-    const typingSpeed = 110;
-    const delayBeforeRestart = 1500;
-    let i = 0;
-    let isDeleting = false;
-    let textIndex = 0; // To switch between texts
 
-    function typeEffect() {
-        const element = document.getElementById("typing-text");
-        const currentText = texts[textIndex];
-
-        if (!isDeleting && i < currentText.length) {
-            element.textContent += currentText.charAt(i);
-            i++;
-            setTimeout(typeEffect, typingSpeed);
-        } 
-        else if (isDeleting && i > 0) {
-            element.textContent = currentText.substring(0, i - 1);
-            i--;
-            setTimeout(typeEffect, typingSpeed / 2);
-        } 
-        else {
-            if (!isDeleting) {
-                isDeleting = true;
-                setTimeout(typeEffect, delayBeforeRestart);
-            } 
-            else {
-                isDeleting = false;
-                i = 0;
-                textIndex = (textIndex + 1) % texts.length; // Switch to the next text
-                setTimeout(typeEffect, typingSpeed);
-            }
-        }
-    }
-
-    typeEffect();
-});
-
-
-
-// Modified Portfolio Functions
 function convertCelsiusToFahrenheit() {
     let celsius = parseFloat(prompt("Enter Celsius"));
     if (isNaN(celsius)) {
@@ -158,7 +117,7 @@ function compareWord() {
     }
 }
 
-// Homepage Functions
+
 function showSection(sectionId) {
     document.querySelectorAll('section').forEach(section => {
         section.classList.add('hidden');
@@ -227,9 +186,9 @@ document.addEventListener('DOMContentLoaded', () => {
 function toggleLike(element) {
     const heartImg = element.querySelector('img');
     if (heartImg.src.includes('images/red-heart-outline.png')) {
-        heartImg.src = 'images/red-heart-colored.png'; // Path to the red heart image
+        heartImg.src = 'images/red-heart-colored.png'; 
     } else {
-        heartImg.src = 'images/red-heart-outline.png'; // Path to the default heart image
+        heartImg.src = 'images/red-heart-outline.png'; 
     }
 }
 
@@ -242,7 +201,7 @@ function addComment(button) {
 
         let newComment = document.createElement("li");
         newComment.textContent = commentText;
-        commentList.prepend(newComment); // Add the new comment to the beginning of the list
+        commentList.prepend(newComment); 
 
         commentInput.value = "";
     } else {
