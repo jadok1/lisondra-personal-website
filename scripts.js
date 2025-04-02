@@ -184,10 +184,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function toggleLike(element) {
     const heartImg = element.querySelector('img');
-    if (heartImg.src.includes('images/red-heart-outline.png')) {
-        heartImg.src = 'images/red-heart-colored.png'; 
+    if (heartImg.src.includes('red-heart-outline.png')) {
+        heartImg.src = 'red-heart-colored.png'; 
     } else {
-        heartImg.src = 'images/red-heart-outline.png'; 
+        heartImg.src = 'red-heart-outline.png'; 
     }
 }
 
