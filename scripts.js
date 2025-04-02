@@ -1,12 +1,9 @@
 function convertCelsiusToFahrenheit() {
     let celsius;
-    do {
         celsius = parseFloat(prompt("Enter Celsius to convert into Fahrenheit (numbers only)"));
-        if (celsius === null) {return;}
         if (isNaN(celsius)) {
             alert("Invalid input! Please enter a valid number without letters or special characters");
         }
-    } while (isNaN(celsius));
     
     let temp_F = (celsius * 1.8 + 32).toFixed(2);
     alert(`${celsius}°C converted into ${temp_F}°F`);
@@ -14,29 +11,18 @@ function convertCelsiusToFahrenheit() {
 
 function computeAcceleration() {
     let iv, fv, ct;
-    do {
         iv = parseFloat(prompt("Enter Initial Velocity in m/s (numbers only)"));
-        if (iv === null) return;
         if (isNaN(iv)) {
             alert("Invalid input! Please enter a valid number without letters or special characters");
         }
-    } while (isNaN(iv));
-    
-    do {
         fv = parseFloat(prompt("Enter Final Velocity in m/s (numbers only)"));
-        if (fv === null) return;
         if (isNaN(fv)) {
             alert("Invalid input! Please enter a valid number without letters or special characters");
         }
-    } while (isNaN(fv));
-    
-    do {
         ct = parseFloat(prompt("Enter Change Time in seconds (numbers only, cannot be zero)"));
-        if (ct === null) return;
         if (isNaN(ct) || ct === 0) {
             alert("Invalid input! Please enter a valid number (not zero) without letters or special characters");
         }
-    } while (isNaN(ct) || ct === 0);
     
     let acceleration = ((fv - iv) / ct).toFixed(2);
     alert(`Acceleration is ${acceleration} meters every second squared.`);
@@ -44,29 +30,15 @@ function computeAcceleration() {
 
 function basicMathOps() {
     let num1, num2, operator;
-    do {
         num1 = parseFloat(prompt("Enter first number (numbers only)"));
-        if (num1 === null) return;
         if (isNaN(num1)) {
             alert("Invalid input! Please enter a valid number without letters or special characters");
         }
-    } while (isNaN(num1));
-    
-    do {
         num2 = parseFloat(prompt("Enter    Enter second number (numbers only)"));
-        if (num2 === null) return;
         if (isNaN(num2)) {
             alert("Invalid input! Please enter a valid number without letters or special characters");
         }
-    } while (isNaN(num2));
-    
-    do {
         operator = prompt("Operators:\n M - Multiplication\n D - Division\n A - Addition\n S - Subtraction\nEnter Operator:").toUpperCase().trim();
-        if (operator === null) return;
-        if (!['M', 'D', 'A', 'S'].includes(operator)) {
-            alert("Invalid operator! Please enter M, D, A, or S only");
-        }
-    } while (!['M', 'D', 'A', 'S'].includes(operator));
     
     let result;
     switch(operator) {
@@ -86,22 +58,16 @@ function basicMathOps() {
         case 'S':
             result = num1 - num2;
             break;
+        default:
+            alert("Invalid operator! Please enter M, D, A, or S only")
+            break;
     }
     alert(`Result: ${result}`);
 }
 
 function yourBirthStone() {
     let month;
-    const validMonths = ["january", "february", "march", "april", "may", "june", 
-                       "july", "august", "september", "october", "november", "december"];
-    
-    do {
         month = prompt("Enter your Birth Month (letters only, no numbers or special characters)").toLowerCase().trim();
-        if (month === null) return;
-        if (!validMonths.includes(month) || /[^a-z]/i.test(month)) {
-            alert("Invalid input! Please enter a valid month name using letters only");
-        }
-    } while (!validMonths.includes(month) || /[^a-z]/i.test(month));
     let a;
     switch(month) {
         case "january":
@@ -139,6 +105,9 @@ function yourBirthStone() {
             break;
         case "december":
             a="Blue Zircon, Turquoise, & Tanzanite";
+            break;
+        default:
+            alert("Invalid input! Please enter a valid month name using letters only");
             break;
     }
     alert(`Your Birthstone is ${a}`);
