@@ -1,35 +1,67 @@
-
 function convertCelsiusToFahrenheit() {
-    let celsius = parseFloat(prompt("Enter Celsius to convert into Fahrenheit"));
-    if (isNaN(celsius)) {
-        alert("Please enter a valid number");
-        return;
-    }
+    let celsius;
+    do {
+        celsius = parseFloat(prompt("Enter Celsius to convert into Fahrenheit (numbers only)"));
+        if (isNaN(celsius)) {
+            alert("Invalid input! Please enter a valid number without letters or special characters");
+        }
+    } while (isNaN(celsius));
+    
     let temp_F = (celsius * 1.8 + 32).toFixed(2);
     alert(`${celsius}°C converted into ${temp_F}°F`);
 }
 
 function computeAcceleration() {
-    let iv = parseFloat(prompt("Enter Initial Velocity in m/s or meter per second"));
-    let fv = parseFloat(prompt("Enter Final Velocity in m/s or meter per second"));
-    let ct = parseFloat(prompt("Enter Change Time in seconds"));
-    if (isNaN(iv) || isNaN(fv) || isNaN(ct) || ct === 0) {
-        alert("Please enter valid numbers (time cannot be zero)");
-        return;
-    }
+    let iv, fv, ct;
+    do {
+        iv = parseFloat(prompt("Enter Initial Velocity in m/s (numbers only)"));
+        if (isNaN(iv)) {
+            alert("Invalid input! Please enter a valid number without letters or special characters");
+        }
+    } while (isNaN(iv));
+    
+    do {
+        fv = parseFloat(prompt("Enter Final Velocity in m/s (numbers only)"));
+        if (isNaN(fv)) {
+            alert("Invalid input! Please enter a valid number without letters or special characters");
+        }
+    } while (isNaN(fv));
+    
+    do {
+        ct = parseFloat(prompt("Enter Change Time in seconds (numbers only, cannot be zero)"));
+        if (isNaN(ct) || ct === 0) {
+            alert("Invalid input! Please enter a valid number (not zero) without letters or special characters");
+        }
+    } while (isNaN(ct) || ct === 0);
+    
     let acceleration = ((fv - iv) / ct).toFixed(2);
     alert(`Acceleration is ${acceleration} meters every second squared.`);
 }
 
 function basicMathOps() {
-    let num1 = parseFloat(prompt("Enter first number"));
-    let num2 = parseFloat(prompt("Enter second number"));
-    let operator = prompt("Operators:\n M - Multiplication\n D- Division\n A- Addition\n S- Subtraction\nEnter Operator:").toUpperCase();
+    let num1, num2, operator;
+    do {
+        num1 = parseFloat(prompt("Enter first number (numbers only)"));
+        if (isNaN(num1)) {
+            alert("Invalid input! Please enter a valid number without letters or special characters");
+        }
+    } while (isNaN(num1));
+    
+    do {
+        num2 = parseFloat(prompt("Enter    Enter second number (numbers only)"));
+        if (isNaN(num2)) {
+            alert("Invalid input! Please enter a valid number without letters or special characters");
+        }
+    } while (isNaN(num2));
+    
+    do {
+        operator = prompt("Operators:\n M - Multiplication\n D - Division\n A - Addition\n S - Subtraction\nEnter Operator:").toUpperCase().trim();
+        if (!['M', 'D', 'A', 'S'].includes(operator)) {
+            alert("Invalid operator! Please enter M, D, A, or S only");
+        }
+    } while (!['M', 'D', 'A', 'S'].includes(operator));
+    
     let result;
-    if (isNaN(num1) || isNaN(num2)) {
-        alert("Please enter valid numbers");
-        return;
-    }
     switch(operator) {
         case 'M':
             result = num1 * num2;
@@ -47,56 +79,59 @@ function basicMathOps() {
         case 'S':
             result = num1 - num2;
             break;
-        default:
-            result = "Invalid operator";
-            break;
     }
     alert(`Result: ${result}`);
 }
 
 function yourBirthStone() {
-    let month = prompt("Enter your Birth Month").toLowerCase().trim();
+    let month;
+    const validMonths = ["january", "february", "march", "april", "may", "june", 
+                       "july", "august", "september", "october", "november", "december"];
+    
+    do {
+        month = prompt("Enter your Birth Month (letters only, no numbers or special characters)").toLowerCase().trim();
+        if (!validMonths.includes(month) || /[^a-z]/i.test(month)) {
+            alert("Invalid input! Please enter a valid month name using letters only");
+        }
+    } while (!validMonths.includes(month) || /[^a-z]/i.test(month));
     let a;
     switch(month) {
         case "january":
             a = "Garnet";
             break;
         case "february":
-            alert("Your Birthstone is Amethyst");
-            return;
+            a="Amethyst";
+            break;
         case "march":
-            alert("Your Birthstone is Aquamarine");
-            return;
+            a="Aquamarine";
+            break;
         case "april":
-            alert("Your Birthstone is Diamond");
-            return;
+            a="Diamond";
+            break;
         case "may":
-            alert("Your Birthstone is Emerald");
-            return;
+            a="Emerald";
+            break;
         case "june":
-            alert("Your Birthstone is Alexandrite & Pearl");
-            return;
+            a="Alexandrite & Pearl";
+            break;
         case "july":
-            alert("Your Birthstone is Ruby");
-            return;
+            a="Ruby";
+            break;
         case "august":
-            alert("Your Birthstone is Peridot");
-            return;
+            a="Peridot";
+            break;
         case "september":
-            alert("Your Birthstone is Sapphire");
-            return;
+            a="Sapphire";
+            break;
         case "october":
-            alert("Your Birthstone is Opal & Tourmaline");
-            return;
+            a=" Opal & Tourmaline";
+            break;
         case "november":
-            alert("Your Birthstone is Citrine & Topaz");
-            return;
+            a="Citrine & Topaz";
+            break;
         case "december":
-            alert("Your Birthstone is Blue Zircon, Turquoise, & Tanzanite");
-            return;
-        default:
-            alert("Invalid month input");
-            return;
+            a="Blue Zircon, Turquoise, & Tanzanite";
+            break;
     }
     alert(`Your Birthstone is ${a}`);
 }
