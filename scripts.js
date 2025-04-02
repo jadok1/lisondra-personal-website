@@ -2,7 +2,7 @@ function convertCelsiusToFahrenheit() {
     let celsius;
     do {
         celsius = parseFloat(prompt("Enter Celsius to convert into Fahrenheit (numbers only)"));
-        if (celsius === null) return;
+        if (celsius === null) {return;}
         if (isNaN(celsius)) {
             alert("Invalid input! Please enter a valid number without letters or special characters");
         }
