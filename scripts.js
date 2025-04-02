@@ -1,6 +1,3 @@
-function closee() {
-     self.close();
-}
 
 function convertCelsiusToFahrenheit() {
     let celsius = parseFloat(prompt("Enter Celsius"));
