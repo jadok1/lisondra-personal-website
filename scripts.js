@@ -1,46 +1,35 @@
+
 function convertCelsiusToFahrenheit() {
-    let celsius;
-        celsius = parseFloat(prompt("Enter Celsius to convert into Fahrenheit (numbers only)"));
-        if (isNaN(celsius)) {
-            alert("Invalid input! Please enter a valid number without letters or special characters");
-        }
-    
+    let celsius = parseFloat(prompt("Enter Celsius to convert into Fahrenheit"));
+    if (isNaN(celsius)) {
+        alert("Please enter a valid number");
+        return;
+    }
     let temp_F = (celsius * 1.8 + 32).toFixed(2);
     alert(`${celsius}°C converted into ${temp_F}°F`);
 }
 
 function computeAcceleration() {
-    let iv, fv, ct;
-        iv = parseFloat(prompt("Enter Initial Velocity in m/s (numbers only)"));
-        if (isNaN(iv)) {
-            alert("Invalid input! Please enter a valid number without letters or special characters");
-        }
-        fv = parseFloat(prompt("Enter Final Velocity in m/s (numbers only)"));
-        if (isNaN(fv)) {
-            alert("Invalid input! Please enter a valid number without letters or special characters");
-        }
-        ct = parseFloat(prompt("Enter Change Time in seconds (numbers only, cannot be zero)"));
-        if (isNaN(ct) || ct === 0) {
-            alert("Invalid input! Please enter a valid number (not zero) without letters or special characters");
-        }
-    
+    let iv = parseFloat(prompt("Enter Initial Velocity in m/s or meter per second"));
+    let fv = parseFloat(prompt("Enter Final Velocity in m/s or meter per second"));
+    let ct = parseFloat(prompt("Enter Change Time in seconds"));
+    if (isNaN(iv) || isNaN(fv) || isNaN(ct) || ct === 0) {
+        alert("Please enter valid numbers (time cannot be zero)");
+        return;
+    }
     let acceleration = ((fv - iv) / ct).toFixed(2);
     alert(`Acceleration is ${acceleration} meters every second squared.`);
 }
 
 function basicMathOps() {
-    let num1, num2, operator;
-        num1 = parseFloat(prompt("Enter first number (numbers only)"));
-        if (isNaN(num1)) {
-            alert("Invalid input! Please enter a valid number without letters or special characters");
-        }
-        num2 = parseFloat(prompt("Enter    Enter second number (numbers only)"));
-        if (isNaN(num2)) {
-            alert("Invalid input! Please enter a valid number without letters or special characters");
-        }
-        operator = prompt("Operators:\n M - Multiplication\n D - Division\n A - Addition\n S - Subtraction\nEnter Operator:").toUpperCase().trim();
-    
+    let num1 = parseFloat(prompt("Enter first number"));
+    let num2 = parseFloat(prompt("Enter second number"));
+    let operator = prompt("Operators:\n M - Multiplication\n D- Division\n A- Addition\n S- Subtraction\nEnter Operator:").toUpperCase();
     let result;
+    if (isNaN(num1) || isNaN(num2)) {
+        alert("Please enter valid numbers");
+        return;
+    }
     switch(operator) {
         case 'M':
             result = num1 * num2;
@@ -59,58 +48,56 @@ function basicMathOps() {
             result = num1 - num2;
             break;
         default:
-            alert("Invalid operator! Please enter M, D, A, or S only")
+            result = "Invalid operator";
             break;
     }
     alert(`Result: ${result}`);
 }
 
 function yourBirthStone() {
-    let month;
-        month = prompt("Enter your Birth Month (letters only, no numbers or special characters)").toLowerCase().trim();
+    let month = prompt("Enter your Birth Month").toLowerCase().trim();
     let a;
     switch(month) {
         case "january":
-            a = "Garnet";
+            alert("Your Birthstone is Garnet");
             break;
         case "february":
-            a="Amethyst";
-            break;
+            alert("Your Birthstone is Amethyst");
+            return;
         case "march":
-            a="Aquamarine";
-            break;
+            alert("Your Birthstone is Aquamarine");
+            return;
         case "april":
-            a="Diamond";
-            break;
+            alert("Your Birthstone is Diamond");
+            return;
         case "may":
-            a="Emerald";
-            break;
+            alert("Your Birthstone is Emerald");
+            return;
         case "june":
-            a="Alexandrite & Pearl";
-            break;
+            alert("Your Birthstone is Alexandrite & Pearl");
+            return;
         case "july":
-            a="Ruby";
-            break;
+            alert("Your Birthstone is Ruby");
+            return;
         case "august":
-            a="Peridot";
-            break;
+            alert("Your Birthstone is Peridot");
+            return;
         case "september":
-            a="Sapphire";
-            break;
+            alert("Your Birthstone is Sapphire");
+            return;
         case "october":
-            a=" Opal & Tourmaline";
-            break;
+            alert("Your Birthstone is Opal & Tourmaline");
+            return;
         case "november":
-            a="Citrine & Topaz";
-            break;
+            alert("Your Birthstone is Citrine & Topaz");
+            return;
         case "december":
-            a="Blue Zircon, Turquoise, & Tanzanite";
-            break;
+            alert("Your Birthstone is Blue Zircon, Turquoise, & Tanzanite");
+            return;
         default:
-            alert("Invalid input! Please enter a valid month name using letters only");
-            break;
+            alert("Invalid month input");
+            return;
     }
-    alert(`Your Birthstone is ${a}`);
 }
 
 function compareWord() {
@@ -197,10 +184,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function toggleLike(element) {
     const heartImg = element.querySelector('img');
-    if (heartImg.src.includes('red-heart-outline.png')) {
-        heartImg.src = 'red-heart-colored.png'; 
+    if (heartImg.src.includes('images/red-heart-outline.png')) {
+        heartImg.src = 'images/red-heart-colored.png'; 
     } else {
-        heartImg.src = 'red-heart-outline.png'; 
+        heartImg.src = 'images/red-heart-outline.png'; 
     }
 }
 
