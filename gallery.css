@@ -107,16 +107,6 @@ body {
     cursor: pointer;
     border-radius: 10px;
 }
-.artwork-container {
-    position: relative; 
-    width: 300px; 
-    border: 3px solid #ff6347;
-    border-radius: 15px; 
-    padding: 10px; 
-    margin-top: 30px; 
-    box-sizing: border-box; 
-}
-
 .artwork button {
     background-color: #e74c3c;
     color: white;
