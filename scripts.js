@@ -2,6 +2,7 @@ function convertCelsiusToFahrenheit() {
     let celsius;
     do {
         celsius = parseFloat(prompt("Enter Celsius to convert into Fahrenheit (numbers only)"));
+        if (celsius === null) return;
         if (isNaN(celsius)) {
             alert("Invalid input! Please enter a valid number without letters or special characters");
         }
@@ -15,6 +16,7 @@ function computeAcceleration() {
     let iv, fv, ct;
     do {
         iv = parseFloat(prompt("Enter Initial Velocity in m/s (numbers only)"));
+        if (iv === null) return;
         if (isNaN(iv)) {
             alert("Invalid input! Please enter a valid number without letters or special characters");
         }
@@ -22,6 +24,7 @@ function computeAcceleration() {
     
     do {
         fv = parseFloat(prompt("Enter Final Velocity in m/s (numbers only)"));
+        if (fv === null) return;
         if (isNaN(fv)) {
             alert("Invalid input! Please enter a valid number without letters or special characters");
         }
@@ -29,6 +32,7 @@ function computeAcceleration() {
     
     do {
         ct = parseFloat(prompt("Enter Change Time in seconds (numbers only, cannot be zero)"));
+        if (ct === null) return;
         if (isNaN(ct) || ct === 0) {
             alert("Invalid input! Please enter a valid number (not zero) without letters or special characters");
         }
@@ -42,6 +46,7 @@ function basicMathOps() {
     let num1, num2, operator;
     do {
         num1 = parseFloat(prompt("Enter first number (numbers only)"));
+        if (num1 === null) return;
         if (isNaN(num1)) {
             alert("Invalid input! Please enter a valid number without letters or special characters");
         }
@@ -49,6 +54,7 @@ function basicMathOps() {
     
     do {
         num2 = parseFloat(prompt("Enter    Enter second number (numbers only)"));
+        if (num2 === null) return;
         if (isNaN(num2)) {
             alert("Invalid input! Please enter a valid number without letters or special characters");
         }
@@ -56,6 +62,7 @@ function basicMathOps() {
     
     do {
         operator = prompt("Operators:\n M - Multiplication\n D - Division\n A - Addition\n S - Subtraction\nEnter Operator:").toUpperCase().trim();
+        if (operator === null) return;
         if (!['M', 'D', 'A', 'S'].includes(operator)) {
             alert("Invalid operator! Please enter M, D, A, or S only");
         }
@@ -90,6 +97,7 @@ function yourBirthStone() {
     
     do {
         month = prompt("Enter your Birth Month (letters only, no numbers or special characters)").toLowerCase().trim();
+        if (month === null) return;
         if (!validMonths.includes(month) || /[^a-z]/i.test(month)) {
             alert("Invalid input! Please enter a valid month name using letters only");
         }
