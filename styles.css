@@ -35,7 +35,7 @@ img {
     max-width: 100%;
     height: auto;
 }
-/* Additional Media Queries for Full Responsiveness */
+
 
 @media screen and (max-width: 1024px) {
     .homepage-container {
@@ -174,7 +174,7 @@ section {
     display: none;
 }
 
-/* Homepage Styling */
+
 #homepage {
     background: url('qweee.png') no-repeat center center;
     background-size: 45%;
@@ -248,7 +248,7 @@ section {
 .intro .highlight-name {
     color: #c0392b;
     margin-bottom: -5px;
-    border-right: 1px solid #c0392b; /* Cursor effect */
+    border-right: 1px solid #c0392b; 
     font-size: 28px;
     font-weight: bold;
     white-space: nowrap;
@@ -274,15 +274,15 @@ section {
 
 .intro .description {
     color: #2c3e50;
-    font-size: 16px; /* Smaller font for the description */
-    font-style: normal; /* Remove italic */
+    font-size: 16px; 
+    font-style: normal; 
     margin-bottom: 15px;
     line-height: 1.8;
 }
 
 .intro h3 {
     color: #2c3e50;
-    font-style: normal; /* Remove italic */
+    font-style: normal; 
     margin-bottom: 15px;
     line-height: 2.0;
     font-size: 18px;
@@ -302,7 +302,7 @@ section {
 
 .nav-name {
     display: flex;
-    align-items: center; /* Vertically center the logo and text */
+    align-items: center; 
 }
 
 .nav-name h1 {
@@ -348,14 +348,14 @@ section {
 
 
 
-/* Floating Container Styling */
+
 #floating-backdrop {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent gray backdrop */
+    background-color: rgba(0, 0, 0, 0.5); 
     z-index: 999;
 }
 
@@ -409,7 +409,7 @@ section {
     background-color: #95a5a6;
 }
 
-/* Social Links */
+
 .social-links {
     display: flex;
     justify-content: left;
@@ -431,53 +431,53 @@ section {
 
 
 #portfolio h2 {
-    font-size: xx-large; /* As provided */
-    font-weight: 1000; /* As provided */
-    color: #ffffff; /* White text for contrast */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow for readability */
+    font-size: xx-large; 
+    font-weight: 1000; 
+    color: #ffffff; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
     margin-bottom: 20px;
-    position: relative; /* Ensure it respects z-index */
-    z-index: 1; /* Place above the image */
+    position: relative; 
+    z-index: 1; 
 }
 #portfolio {
-    position: relative; /* Establish positioning context for child elements */
-    min-height: 83vh; /* Ensure the section is at least the height of the viewport */
-    padding: 20px; /* Existing padding */
-    text-align: center; /* Existing text alignment */
-    overflow: hidden; /* Prevent overflow issues with the image */
+    position: relative; 
+    min-height: 83vh; 
+    padding: 20px; 
+    text-align: center; 
+    overflow: hidden; 
     border-radius: 20px;
 }
 
 #portfolio img {
-    position: absolute; /* Position the image absolutely within the section */
+    position: absolute; 
     top: 0;
     left: 0;
     bottom: auto;
-    width: 105%; /* Make the image cover the entire width */
-    height: 105%; /* Make the image cover the entire height */
-    object-fit: cover; /* Ensure the image scales to cover the section */
-    z-index: 0; /* Place the image behind other content */
+    width: 105%; 
+    height: 105%; 
+    object-fit: cover; 
+    z-index: 0;
     
 }
 
 .challenges {
     overflow: hidden;
-    background-color: rgba(255, 255, 255, 0.248); /* Semi-transparent white for readability */
-    padding: 20px; /* Existing padding */
-    margin: 20px auto; /* Existing margin */
-    max-width: 400px; /* Existing max-width */
-    border-radius: 10px; /* Existing border-radius */
-    text-align: center; /* Existing text alignment */
-    position: relative; /* Ensure it respects z-index */
-    z-index: 1; /* Place above the image */
+    background-color: rgba(255, 255, 255, 0.248); 
+    padding: 20px; 
+    margin: 20px auto; 
+    max-width: 400px; 
+    border-radius: 10px; 
+    text-align: center; 
+    position: relative; 
+    z-index: 1; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .challenges p {
     font-size: 1.2em; 
     margin-bottom: 15px; 
-    color: #ffffff; /* White text for contrast */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow for readability */
+    color: #ffffff; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
 }
 
 .challenges h3 {
@@ -485,8 +485,8 @@ section {
     font-size: 25px; 
     font-weight: 700;
     margin-bottom: 15px; 
-    color: #ffffff; /* White text for contrast */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow for readability */
+    color: #ffffff; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
 }
 
 
@@ -502,11 +502,11 @@ section {
     cursor: pointer;
     font-size: 1em;
     text-align: center;
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+    transition: transform 0.3s ease, background-color 0.3s ease; 
     
 }
 
 .challenges .challenge-buttons button:hover {
     background-color: #c0392b;
-    transform: scale(1.05); /* Slightly zoom the button */
+    transform: scale(1.05); 
 }
